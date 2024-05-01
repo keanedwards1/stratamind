@@ -1,0 +1,406 @@
+:root {
+    --header-color: #eff5f7;
+    --body-color: #072406;
+    --body-color: #ded9c3;
+    --body-color: #f4f9fa;
+    --analogous-1: #D6DEC3;
+    --analogous-2: #DECBC3;
+    --footer-color: rgb(255, 255, 255);
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
+    font-smooth: never;
+  }
+  
+  * img {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none; 
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  a:visited {
+    color: rgb(30, 40, 80);
+    text-decoration: none;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:-webkit-any-link {
+    color: rgb(30, 40, 80);
+  }
+  
+  main {
+    padding: 0;
+  }
+  
+  .pointer {
+    cursor: pointer;
+  }
+  
+  /* @font-face {
+    font-family: Grid;
+    src: url('/frontend/fonts/RomanGridCaps.ttf') format('truetype');
+  } */
+  
+  /* @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+   */
+  
+  @font-face {
+    font-family: Playfair;
+    src: url('/frontend/fonts/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: libre;
+    src: url('/frontend/fonts/libre-baskerville/LibreBaskerville-Regular.ttf') format('truetype');
+  }
+  
+  /* @font-face {
+      font-family: Dekko;
+      src: url('/frontend/fonts/Dekko-Regular.ttf') format('truetype');
+  } */
+  
+  /* Header Styles */
+  header {
+    position: relative;
+    color: rgb(30, 40, 80);
+    padding: 10px;
+    background-color: var(--header-color);
+    box-shadow: 0px 0.5px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-title {
+    display: flex;
+    /* Ensures the elements are laid out in a row */
+    align-items: center;
+    /* Vertically centers the items in the container */
+    text-align: center;
+    /* Center the text */
+    margin-left: 10px;
+  }
+  
+  #logo-text {
+    margin-left: 0px;
+    /* Adds space between the SVG and the text */
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 0px;
+    font-family: libre;
+    color: rgb(30, 40, 80); /* for firefox */
+  }
+  
+  .column-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  
+  @media (max-width: 1050px) {
+    .column-wrapper {
+      flex-direction: column;
+    }
+  }
+  
+  .left-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .right-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  body {
+    font-family: Playfair, Arial, sans-serif;
+    font-family: Inter, "Segoe UI", "Helvetica Neue", sans-serif;
+    font-weight: 200;
+    font-feature-settings: normal;
+    font-size: 14px;
+    /* Use your font as a fallback */
+    letter-spacing: 1px;
+    margin: 0;
+    background-color: var(--body-color);
+    position: relative;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo a {
+    color: rgb(30, 40, 80);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  #logo {
+    width: 100px;
+  }
+  
+  .nav-links {
+    margin: 0 40px 0 0;
+    z-index: 2;
+    font-weight: 400;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  @media (max-width: 868px) {
+    .nav-links {
+      display: none;
+    }
+  }
+  
+  .nav-links a {
+    color: #505050;
+    color: black;
+    color: rgb(30, 40, 80);
+    padding-left: 20px;
+    padding-right: 10px;
+    margin-right: -5px;
+    padding-bottom: 20px;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .nav-links a:hover {
+   color: rgb(66, 188, 221);
+  }
+  
+  /* .nav-links a[data-menu="make-a-logo-dropdown"]:hover {
+    text-decoration: underline;
+  } */
+  
+  .samples-menu {
+    cursor: pointer;
+  }
+  
+  .pricing-menu {
+    cursor: pointer;
+  }
+  
+   .dynamic-arrow {
+    position: absolute;
+    bottom: -22px; /* Adjust based on your layout */
+    left: 0;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid #ffffff; /* Arrow color */
+  /*   transition: opacity 0.5s ease; */ /* left 0.4s ease, */
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .nav-links a:hover ~ .dynamic-arrow {
+    opacity: 1; /* Show arrow on hover */
+  }
+  
+  .dynamic-arrow-shadow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 27px solid transparent;
+    border-right: 27px solid transparent;
+    border-bottom: 27px solid rgba(213, 213, 213, 0.5); 
+    filter: blur(2px); 
+    z-index: 0; 
+    margin-left: 10px;
+    margin-top: -2px;
+    opacity: 0;
+  /*   transition: opacity 0.5s ease; */ /* left 0.4s ease,  */
+  }
+  
+  .arrow {
+    font-family: "Arial", sans-serif;
+  }
+  
+  /* 
+  .pricing-title {
+    font-family: 'Libre Baskerville', serif;
+    background-color: #e8e8e8;  Soft gray background 
+    color: #333; Dark text for contrast 
+    padding: 20px 40px;
+    border-radius: 8px;  Slightly rounded corners for a softer look 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  Subtle shadow for depth 
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .pricing-title:hover {
+    transform: translateY(-5px);  Gentle lift effect on hover 
+    cursor: pointer;
+  }
+  
+  .pricing-title::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.5) 50%, transparent);
+    z-index: 0;
+    transition: all 0.7s ease;
+    animation: breeze 6s infinite alternate;
+  }
+  
+  @keyframes breeze {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .pricing-title p {
+    z-index: 1;
+    font-size: 24px;
+    margin: 0; /* Removes default margin for a cleaner look 
+  } */
+  
+  .dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    background-color: #fff;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 20px;
+    height: 400px;
+    width: 600px;
+    transition: opacity 0.5s ease;
+    color: black;
+    opacity: 0;
+    z-index: 1;
+    margin-left: -230px;
+    visibility: hidden;
+  }
+  
+  /* .nav-links a:hover ~ .dropdown,
+  .dropdown:hover {
+  opacity: 1;
+  visibility: visible;
+  } */
+  
+  /* Main Content Styles */
+  
+  #hero-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 50px 0 20px 0;
+    margin: 0 0 40px 0;
+    color: rgb(30, 40, 80);
+  }
+  
+  .hero h1 {
+    font-family: Tiempos, serif;
+    font-feature-settings: normal;
+    -webkit-font-smoothing: antialiased;
+    font-size: 60px;
+    font-variation-settings: normal;
+    font-weight: 500;
+    letter-spacing: normal;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  
+  .hero p {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    width: 80%;
+  }
+  
+  .section-1 {
+    height: 73vh;
+  }
+  
+  .home-button-wrapper {
+    width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-link {
+    cursor: pointer;
+    /* Variables */
+    --button_radius: 0.75em;
+    --button_color: #fbfbfb;
+    --button_outline_color: rgba(0, 0, 0, 0.7);
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+  }
+  
+  .button-top {
+    display: block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.75em 3.5em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 200ms ease;
+  }
+  
+  .button-link:hover .button-top {
+    /* Pull the button upwards when hovered */
+    transform: translateY(-0.43em);
+  }
+  
+  .button-link:active .button-top {
+    /* Push the button downwards when pressed */
+    transform: translateY(0);
+  } 
+  
+
