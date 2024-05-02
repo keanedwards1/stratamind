@@ -134,7 +134,9 @@
   body {
     font-family: Playfair, Arial, sans-serif;
     font-family: Inter, "Segoe UI", "Helvetica Neue", sans-serif;
-    font-weight: 200;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-feature-settings: normal;
     font-size: 14px;
     /* Use your font as a fallback */
@@ -190,11 +192,11 @@
   }
   
   .nav-links a:hover, #logo-text:hover {
-   color: rgb(188, 94, 225);
+   color: rgb(90, 14, 161);
   }
 
   .nav-links a:active {
-    color: rgb(188, 94, 225);
+    color: rgb(90, 14, 161);
   }
   
   /* .nav-links a[data-menu="make-a-logo-dropdown"]:hover {
@@ -341,12 +343,13 @@
   }
   
   .hero h1 {
-    font-family: Tiempos, serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-feature-settings: normal;
     -webkit-font-smoothing: antialiased;
-    font-size: 60px;
+    font-size: 50px;
     font-variation-settings: normal;
-    font-weight: 500;
     letter-spacing: normal;
     margin-bottom: 0px;
     width: 100%;
@@ -388,7 +391,7 @@
     --button_color: #fbfbfb;
     --button_outline_color: rgba(0, 0, 0, 0.7);
     font-size: 17px;
-    font-weight: bold;
+    font-weight: 500;
     border: none;
     padding: 0;
     border-radius: var(--button_radius);
