@@ -72,7 +72,7 @@
     color: rgb(30, 40, 80);
     padding: 10px;
     background-color: var(--header-color);
-    box-shadow: 0px 0.5px 4px rgba(0, 0, 0, 0.1);
+    box-shadow:  0px 8px 24px rgba(156, 163, 170, 0.2);
   }
   
   .logo-title-container {
@@ -95,9 +95,10 @@
     margin-left: 0px;
     /* Adds space between the SVG and the text */
     font-weight: bold;
-    font-size: 20px;
+    font-size: 24px;
     letter-spacing: 0px;
     font-family: libre;
+    transition: all 0.3s ease;
     color: rgb(30, 40, 80); /* for firefox */
   }
   
@@ -188,8 +189,12 @@
     z-index: 2;
   }
   
-  .nav-links a:hover {
-   color: rgb(66, 188, 221);
+  .nav-links a:hover, #logo-text:hover {
+   color: rgb(188, 94, 225);
+  }
+
+  .nav-links a:active {
+    color: rgb(188, 94, 225);
   }
   
   /* .nav-links a[data-menu="make-a-logo-dropdown"]:hover {
@@ -345,13 +350,14 @@
     letter-spacing: normal;
     margin-bottom: 0px;
     width: 100%;
+    margin-top: -150px;
   }
   
   .hero p {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 400;
-    margin-bottom: 40px;
-    margin-top: 10px;
+    margin-bottom: 24px;
+    margin-top: 20px;
     width: 80%;
   }
   
@@ -359,8 +365,16 @@
     height: 73vh;
   }
   
+  .button-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+  }
+  
   .home-button-wrapper {
-    width: 80%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
