@@ -515,7 +515,7 @@
     align-items: center;
     gap: 2em;
     padding: 50px;
-    margin-top: -300px;
+    margin-top: -70px;
     margin-bottom: -100px;
   }
 
@@ -527,7 +527,7 @@
     transform: perspective(500px) rotateX(60deg);
     min-width: 300px;
     margin-left: 50px;
-    margin-top: 50px;
+    margin-top: -100px;
   }
 
   .loader-2 {

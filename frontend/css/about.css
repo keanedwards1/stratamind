@@ -1,0 +1,103 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header, footer {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    border-bottom: 2px solid #8883ed;
+    padding-bottom: 10px;
+    color: #8883ed;
+}
+
+main {
+    padding: 20px;
+}
+
+.intro {
+    margin-bottom: 30px;
+    font-size: 1.4em;
+    line-height: 1.5em;
+    text-align: center;
+    color: #736fca;
+    font-weight: 800;
+    position: relative;
+    overflow: hidden;
+}
+
+.intro::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    color: #ffffff;
+    background-color: #736fca;
+    transition: left 0.3s;
+}
+
+.intro:hover::before {
+    left: 0;
+}
+
+.verticals {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.vertical {
+    background: rgba(136, 131, 237, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.vertical:hover {
+box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.12);
+transform: scale(1.004);
+}
+
+h3 {
+    color: #8883ed;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-top: 1px solid #8883ed;
+    margin-top: 10px;
+    color: #8883ed;
+}
+
+li:first-child {
+    border-top: none;
+    margin-top: 0;
+}
+
+footer p {
+    margin: 0;
+    color: #ddd;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1050px) {
+    .verticals {
+        grid-template-columns: 1fr;
+    }
+}
