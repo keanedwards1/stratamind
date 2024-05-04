@@ -6,6 +6,8 @@
     --analogous-1: #D6DEC3;
     --analogous-2: #DECBC3;
     --footer-color: rgb(255, 255, 255);
+    --highlight-color: #5a0ea1;
+    --light-highlight: #fbfbff;
     --webkit-font-smoothing: antialiased;
     --moz-osx-font-smoothing: grayscale;
     font-smooth: never;
@@ -192,11 +194,11 @@
   }
   
   .nav-links a:hover, #logo-text:hover {
-   color: rgb(90, 14, 161);
+   color: var(--highlight-color);
   }
 
   .nav-links a:active {
-    color: rgb(90, 14, 161);
+    color: var(--highlight-color);
   }
   
   /* .nav-links a[data-menu="make-a-logo-dropdown"]:hover {
@@ -482,8 +484,11 @@
   .section-2 {
     display: flex;
     flex-direction: row;
-    gap: 200px;
+    justify-content: space-between;
+    gap: 2em;
     padding: 50px;
+    margin-top: -350px;
+    margin-bottom: -100px;
   }
 
   .loader {
@@ -493,16 +498,20 @@
     transform-style: preserve-3d;
     transform: perspective(500px) rotateX(60deg);
   }
+
+  .loader-2 {
+    top: 400px;
+  }
   
   .loader span {
     position: absolute;
     display: block;
-    border: 5px solid #e1d8f0;
-    box-shadow: 0 5px 0 #af97d8;
-    inset: 0 5px 0 #af97d8;
+    border: 5px solid #8ed1b0;
+    box-shadow: 0 5px 0 #92d7b4;
+    inset: 0 5px 0 #92d7b4;
     box-sizing: border-box;
     border-radius: 50%;
-    animation: animate 3s ease-in-out infinite;
+    animation: animate 5s ease-in-out infinite;
   }
   
   @keyframes animate {
@@ -636,6 +645,30 @@
   }
 
 
+  .info-section {
+    background-color: rgb(249, 252, 252);
+    background: #eaeaea;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+    border-radius: 50px;
+    width: 45%; /* Adjust based on content size */
+    text-align: center;
+    margin-top: 200px;
+}
+
+  .info-section h1 {
+    color: #0056b3;
+}
+
+.info-section p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
   .card {
     font-family: Montserrat, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     width: 190px;
@@ -707,6 +740,26 @@
     border: 1px solid #ffcaa6;
     background-color: #ffcaa6;
    }
+
+   .section-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 50px;
+    margin-bottom: -100px;
+  } 
+
+  .section-4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2em;
+    padding: 50px;
+    margin-bottom: -300px;
+    margin-top: 300px;
+  } 
+
    
   
 
