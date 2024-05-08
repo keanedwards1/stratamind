@@ -849,6 +849,10 @@
   .loader-2 {
     margin-left: 0px;
   }
+
+  .loader-2.chart-image img {
+    width: 100%;
+  }
 }
 
 #copyright {
