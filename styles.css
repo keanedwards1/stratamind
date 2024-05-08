@@ -175,7 +175,12 @@
   
   @media (max-width: 868px) {
     .nav-links {
-      display: none;
+      margin-right: 0px;
+      margin-top: 10px;
+    }
+    
+    nav {
+      flex-direction: column;
     }
   }
   
